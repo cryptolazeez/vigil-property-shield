@@ -1,9 +1,23 @@
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Lock, Search } from "lucide-react";
 
 const Hero: React.FC = () => {
+  const titleRef = useRef<HTMLSpanElement>(null);
+  
+  useEffect(() => {
+    const titleElement = titleRef.current;
+    if (!titleElement) return;
+    
+    // Add class after a delay for the animation
+    const timer = setTimeout(() => {
+      titleElement.classList.add('animate-pulse');
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-vigil-primary pt-20 relative overflow-hidden">
       {/* Background image with overlay */}
@@ -20,7 +34,10 @@ const Hero: React.FC = () => {
       <div className="section-container flex flex-col lg:flex-row items-center relative z-10">
         <div className="lg:w-1/2 mb-10 lg:mb-0 animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-white">Property Fraud Prevention</span>
+            <span ref={titleRef} className="text-white relative inline-block">
+              Property Fraud Prevention
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-vigil-accent transform origin-left scale-x-0 transition-transform duration-1000 ease-out"></span>
+            </span>
             <br /> <span className="text-vigil-accent">Through Real-Time Ownership Verification</span>
           </h1>
           <p className="text-lg text-gray-300 mb-8">
