@@ -31,20 +31,20 @@ const steps = [
 
 const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="bg-white">
+    <section id="how-it-works" className="bg-vigil-primary text-white">
       <div className="section-container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">How The Vigil Works</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            How The Vigil Works
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Our technology combines AI-powered data collection with secure verification processes to provide reliable property ownership verification.
           </p>
         </div>
         
         <div className="relative">
           {/* Connecting line */}
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 hidden md:block" />
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-700 hidden md:block" />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, index) => (
@@ -52,9 +52,9 @@ const HowItWorks: React.FC = () => {
                 <div className="bg-vigil-accent rounded-full w-16 h-16 flex items-center justify-center mb-4 shadow-md">
                   {step.icon}
                 </div>
-                <div className="bg-white px-4">
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                <div className="bg-vigil-primary px-4">
+                  <h3 className="text-xl font-bold mb-2 text-white">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
                 </div>
                 <div className="mt-4 text-sm font-semibold text-vigil-accent">Step {index + 1}</div>
               </div>
