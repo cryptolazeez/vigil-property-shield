@@ -35,46 +35,6 @@ const Hero: React.FC = () => {
             </Button>
           </div>
         </div>
-        
-        <div className="lg:w-1/2 lg:pl-16 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          <div className="bg-white/10 backdrop-blur-lg p-8 rounded-lg border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 relative">
-            <div className="absolute -top-4 -right-4 bg-vigil-success text-white rounded-full p-3 animate-pulse">
-              <ShieldCheck size={24} />
-            </div>
-            <h3 className="text-2xl font-bold mb-6 text-white">Secure Property Verification</h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="bg-vigil-accent/20 p-2 rounded-full">
-                  <Search size={20} className="text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Smart Data Scraping</h4>
-                  <p className="text-gray-300">Real-time property data collection across multiple sources</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="bg-vigil-accent/20 p-2 rounded-full">
-                  <ShieldCheck size={20} className="text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Multi-Source Validation</h4>
-                  <p className="text-gray-300">Cross-reference ownership across databases for validity</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="bg-vigil-accent/20 p-2 rounded-full">
-                  <Lock size={20} className="text-white" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Secure Audit Trails</h4>
-                  <p className="text-gray-300">Tamper-proof records for legal and law enforcement access</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
